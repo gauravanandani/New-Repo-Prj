@@ -1,0 +1,48 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script>
+function blank()
+{
+var a=document.forms["f1"]["osname"].value;
+if(a == "")
+{
+alert("Enter any os name please");
+return false;
+}
+}
+</script>
+</head>
+<body>
+<table class=table-responsive>
+<div class="container">
+	<div class="jumbotron">
+<form action="/cgi-bin/redhatvm.py"  name="f1" onsubmit="return blank()">
+<h1>REDHAT OS</h1>
+<tr>
+<th>Name of OS</th>
+<td><input type=text class="form-control"  placeholder="Type OS name" name="osname"></td>
+</tr>
+<tr></tr>
+<tr>
+<th>PORT</th>
+<td><input type=text class="form-control"  placeholder="Enter port number" name="port"></td>
+</tr>
+<tr></tr>
+<tr>
+<th>RAM</th>
+<td><select name="ram"><option>512</option> <option>1024</option></select></td>
+</tr>
+<tr></tr>
+<tr>
+<th>CPU</th>
+<td><select name="cpu"><option>1</option> <option>2</option></select></td></tr>
+<tr></tr>
+</table>
+<input type=submit value="Submit" class="btn btn-default">
+
+	</div>
+<a href=iaaschoose.html>GO BACK</a>
+</div>
+</body>
+</html>
